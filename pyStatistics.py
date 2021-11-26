@@ -13,13 +13,13 @@ class stats:
         for element in self.sortedList:
             if element < self.median():
                 upToMedian.append(element)
-        return median(upToMedian)
+        return stats(upToMedian).median()
     def thirdQuartile(self):
         fromMedian = []
         for element in self.sortedList:
             if element > self.median():
                 fromMedian.append(element)
-        return median(fromMedian)
+        return stats(fromMedian).median()
     def mode(self):
         modes = []
         occurrences = {}
